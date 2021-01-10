@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Keep Talking and Nobody Explodes Morse Trainer</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Keep Talking and Nobody Explodes Morse Trainer</h1>
+
+		<div id="menu" class="block">
+			<div class="uiitem">
+				Set of words/letters:
+				<select id="select-words" class="ui">
+					<option value="en-241">English (241)</option>
+					<option value="en-rnd">English/Random</option>
+					<option value="de-558">German (558)</option>
+					<option value="de-rnd">German/Random</option>
+				</select>
+			</div>
+			<div class="uiitem">
+				Time scale factor:
+				<input type="text" value="1" id="scale-factor" class="ui">
+			</div>
+			<div class="uiitem">
+				<button id="btn-reveal" class="ui">Show Solution</button>
+				<button id="btn-randomize" class="ui">Randomize</button>
+			</div>
+		</div>
+
+		<div id="solution" class="ui block">
+			<div>
+				Word: <span id="solution-word" class="ui morse-text"></span>
+			</div>
+			<div>
+				Morse: <span id="solution-morse" class="ui morse-code"></span>
+			</div>
+			<div>
+				Currently: <span id="solution-current" class="ui morse-text"></span>
+			</div>
+		</div>
+
+		<div id="bomb" class="block">
+			<img src="off.png" id="img_bomb" class="ui" />
+		</div>
+
+		<div class="block footer">
+			<a href="https://www.github.com/johndoe31415/ktanetrain">Created by Johannes Bauer, licensed under GNU GPL-3</a>
+		</div>
+
+		<script language="JavaScript" type="module">
+			import {KTaNESimulator} from "./ktanesimulator.mjs";
+
+			let ui_elements = { };
+			document.querySelectorAll(".ui").forEach(function(element) {
+				ui_elements[element.id] = element;
+			});
+
+			const simulator = new KTaNESimulator(ui_elements);
+		</script>
+	</body>
+</html>

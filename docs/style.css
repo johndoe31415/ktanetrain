@@ -1,0 +1,80 @@
+body {
+	font-family: sans-serif;
+	margin: 15px;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+div.block {
+	margin-bottom: 25px;
+}
+
+div.uiitem {
+	margin-bottom: 8px;
+}
+
+.invisible {
+	display: none;
+}
+
+input, select {
+	height: 18px;
+	padding: 6px 12px;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+select {
+	height: 30px;
+}
+
+input[type=text] {
+	width: 75px;
+}
+
+button {
+	font-size: 110%;
+	padding: 6px 12px;
+	text-align: center;
+	width: 150px;
+	vertical-align: middle;
+	border: 1px solid #245580;
+	border-radius: 4px;
+	color: #000;
+	background-color: #ddd;
+	box-shadow: 2px 2px #eee;
+	margin-right: 10px;
+}
+
+button:active {
+	box-shadow: 2px 2px #666;
+}
+
+button:hover {
+	background-color: #aaa;
+}
+
+.morse-text {
+	font-family: monospace;
+}
+
+.morse-code {
+	font-family: monospace;
+	font-size: 150%;
+}
+
+a {
+	color: #0d7088;
+}
+
+a:hover {
+	color: #408a9c;
+}
+
+.footer {
+	font-size: 75%;
+}
