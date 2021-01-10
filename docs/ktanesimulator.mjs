@@ -134,7 +134,6 @@ export class KTaNESimulator {
 	_next_symbol() {
 		let symbol = null;
 		if (this._index >= this._string.length) {
-			console.log("new");
 			symbol = { "state": false, "duration": this._metadata["display"]["word_gap"], "show": "Start" };
 			this._index = 0;
 		} else {
