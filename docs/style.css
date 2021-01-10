@@ -63,7 +63,6 @@ button:hover {
 }
 
 .morse-code {
-	font-family: monospace;
 	font-size: 150%;
 }
 
@@ -77,4 +76,12 @@ a:hover {
 
 .footer {
 	font-size: 75%;
+}
+
+span.letter {
+	margin-right: 10px;
+}
+
+span.symbol {
+	margin-right: 2px;
 }

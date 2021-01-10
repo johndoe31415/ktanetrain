@@ -101,10 +101,10 @@ export class KTaNESimulator {
 	_transcribe_word_morse(word) {
 		let morse = "";
 		for (let letter of word) {
-			morse += this._metadata["alphabet"][letter] + " ";
+			morse += "<span class=\"letter\">" + this._metadata["alphabet"][letter] + "</span>";
 		}
-		morse = morse.replace(/\./g, "·");
-		morse = morse.replace(/-/g, "–");
+		morse = morse.replace(/\./g, "<span class=\"symbol\">·</span>");
+		morse = morse.replace(/-/g, "<span class=\"symbol\">–</span>");
 		return morse;
 	}
 
@@ -112,7 +112,7 @@ export class KTaNESimulator {
 		const word = this._randomize_word();
 		this._string = this._transcribe_word(word);
 		this._ui_elements["solution-word"].innerText = word;
-		this._ui_elements["solution-morse"].innerText = this._transcribe_word_morse(word);
+		this._ui_elements["solution-morse"].innerHTML = this._transcribe_word_morse(word);
 		this._index = Math.floor(Math.random() * this._string.length);
 	}
 
